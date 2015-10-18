@@ -42,7 +42,7 @@ colnames(totalSteps) <- c("Date", "Steps")
 meanSteps <- as.integer(mean(totalSteps$Steps, na.rm = TRUE))
 medianSteps <- as.integer(median(totalSteps$Steps, na.rm = TRUE))
 #1
-hist (totalSteps$Steps, main = "Total Number of Steps per Day", xlab = "Total Steps per day")
+hist (totalSteps$Steps, main = "Total Number of Steps per Day (NAs removed)", xlab = "Total Steps per day")
 abline(v = meanSteps, col = "red", lty = 2, lwd = 2)
 abline(v = medianSteps, col = "blue")
 ```
@@ -168,7 +168,7 @@ colnames(totalStp) <- c("date", "steps")
 meanStp <- as.integer(mean(totalStp$steps))
 medianStp <- as.integer(median(totalStp$steps))
 
-hist (totalStp$steps, main = "Total Number of Steps per Day", xlab = "Total Steps per day")
+hist (totalStp$steps, main = "Total Number of Steps per Day (NAs filled out)", xlab = "Total Steps per day")
 abline(v = meanStp, col = "red", lty = 2, lwd = 2)
 abline(v = medianStp, col = "blue")
 ```
